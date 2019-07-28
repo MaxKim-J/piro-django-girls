@@ -6,7 +6,7 @@
         <br/>
         <div class="doc">
             <br/>
-            <h4><a href={% url 'post_detail' pk=post.pk %}>{{ post.title }}</a></h4>
+            <h4><a href="{% url 'blog:post_detail' pk=post.pk %}">{{ post.title }}</a></h4>
             <p>published: {{ post.published_date }}</p>
             <p>{{ post.text|linebreaksbr }}</p>
             <hr/>

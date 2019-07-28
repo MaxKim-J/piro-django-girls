@@ -12,7 +12,10 @@
 
     <body>
         <div class="top">
-           <h2><a href="#">종혁 장고 웹배포 연습</a></h2>
+            {% if user.is_authenticated %}
+                <a href="{% url 'blog:post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            {% endif %}
+            <h2><a href="#">종혁 장고 웹배포 연습</a></h2>
             <p>배포 넘넘 신기한것~</p>
         </div>
         <div class="content container"> <!-- 컨테이너 - 로우 - 컬럼 -->

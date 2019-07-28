@@ -1,0 +1,22 @@
+*{
+    text-decoration: None;
+}
+
+
+div {
+    background-color: floralwhite;
+    margin : 0px; padding: 0px;
+}
+
+.top{
+    background-color: orange;
+    padding: 20px;
+}
+
+.doc{
+    padding:10px;
+}
+
+p {
+    font-family: 'lobster'
+}

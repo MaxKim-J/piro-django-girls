@@ -1,26 +1,15 @@
-<html>
-    <head>
-        <title>종혁이의 장고 웹배포 연습</title>
-        <style>
-            div {
-                border : palevioletred solid 3px;
-            }
-        </style>
-    </head>
+{% extends 'blog/base.html' %}
+{% load static %}
 
-    <body>
-        <div>
-            <h1><a href="#">종혁이의 장고 웹배포 연습</a></h1>
-            <p>배포 넘넘 신기한것~</p>
+{% block content %}
+    {% for post in posts %}
+        <br/>
+        <div class="doc">
+            <br/>
+            <h4><a href="#">{{ post.title }}</a></h4>
+            <p>published: {{ post.published_date }}</p>
+            <p>{{ post.text|linebreaksbr }}</p>
+            <hr/>
         </div>
-
-        {% for post in posts %}
-            <div>
-                <h1><a href="#">{{ post.title }}</a></h1><br/>
-                <p>published: {{ post.published_date }}</p><br/>
-                <p>{{ post.text|linebreaksbr }}</p>
-            </div>
-        {% endfor %}
-
-    </body>
-</html>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,28 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>종혁이의 장고 웹배포 연습</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+    </head>
+
+    <body>
+        <div class="top">
+           <h2><a href="#">종혁 장고 웹배포 연습</a></h2>
+            <p>배포 넘넘 신기한것~</p>
+        </div>
+        <div class="content container"> <!-- 컨테이너 - 로우 - 컬럼 -->
+            <div calss = "row">
+                <div class="col-md-8">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -4,19 +4,14 @@
     </head>
     <body>
         <div>
-            <h1><a href="">종혁이의 장고 웹배포 연습</a></h1>
+            <h1><a href="#">종혁이의 장고 웹배포 연습</a></h1>
+            <p>배포 넘넘 신기한것~</p>
         </div>
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">웹배포 어렵당</a></h2>
-            <p>이거 띄우는데 두시간걸렸네 웹배포 어렵당</p>
-        </div>
-
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">으으으으 파이썬 애니웨어</a></h2>
-            <p>깃이랑 연동되는게 넘 편한데 다른 서버환경도 이렇게 구축이 되나</p>
-        </div>
+        {% for post in posts %}
+            <h1><a href="#">{{ post.title }}</a></h1><br/>
+            <p>published: {{ post.published_date }}</p><br/>
+            <p>{{ post.text|linebreaksbr }}</p>
+        {% endfor %}
     </body>
 </html>
